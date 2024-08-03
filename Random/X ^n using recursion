@@ -1,0 +1,21 @@
+
+public class Main
+{
+	public static void main(String[] args) {
+		int n = 5;
+		int x = 2;
+		int res = calc(x,n);
+		System.out.println(res);
+	}
+	
+	static int calc(int x,int n){
+	    if(n == 0) return 1;
+	    
+	    if(x == 0) return 0;
+	    
+	    int x_powerNMinus1 = calc(x,n-1);
+	    int x_powerN = x * x_powerNMinus1;
+
+	    return x_powerN;
+	}
+}
